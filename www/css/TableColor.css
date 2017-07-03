@@ -1,0 +1,72 @@
+#main-navigation { border-top: 0; }
+ 
+#ul1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+   
+ }
+#li1 {
+  display: block;
+  position: relative;
+  float: left;
+  background: #1bc2a2; /* This color is for main menu item list */
+ 
+}
+
+#a1:hover { background: #2c3e50; 
+padding: 4px 4px 4px 4px;   }
+#a2:hover { background: orange;
+ 
+  }
+
+#report 
+#li2 {display: block;
+background: #E91E63;
+  position: relative;
+  float: left;
+  
+
+}
+#a3:hover {color: #fff; 
+font-size: 15px; 
+background: #FF6600; 
+padding: 4px 4px 4px 4px; 
+
+}
+ul ul ul {
+  left: 75%;
+  top: 0;
+}
+
+
+li ul { display: none; }
+ul li a {
+  display: block;
+   padding: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+li:hover li { float: none; }
+
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+ul:after { clear: both; }
+tr:nth-child(even) {background: #C5CAE9}
+tr:nth-child(odd) {background: #00BCD4}
+.pg-normal { 
+color: #000000; 
+font-size: 15px; 
+cursor: pointer; 
+background: #FF6600; 
+padding: 4px 4px 4px 4px; 
+}

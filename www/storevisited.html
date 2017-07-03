@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <script type="text/javascript">
+    
+        
+
+$( function() {
+           $( "#crm_date" ).datepicker({
+            onSelect: function(dateText, inst) {
+               $(this).val(dateText);
+               $(this).change();
+            
+            },
+           changeMonth: true,
+           changeYear: true,
+           yearRange: 'c-100:c+100'
+           });
+              
+           } );
+            
+             $( function() {
+           $( "#crm_po_signed_date" ).datepicker({
+            onSelect: function(dateText, inst) {
+               $(this).val(dateText);
+               $(this).change();
+            
+            },
+           changeMonth: true,
+           changeYear: true,
+           yearRange: 'c-100:c+100'
+           });
+              
+           } );
+            
+              $( function() {
+           $( "#crm_hemas_date" ).datepicker({
+            onSelect: function(dateText, inst) {
+               $(this).val(dateText);
+               $(this).change();
+            
+            },
+           changeMonth: true,
+           changeYear: true,
+           yearRange: 'c-100:c+100'
+           });
+              
+           } );
+        
+   
+    </script>
+    
+    <title>99 Retail Street CRM Reports</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+<!--
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+-->
+    
+    <link rel="stylesheet" href="css/app.css"/>
+    
+    
+       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/app2.css">
+
+    
+    
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+        
+      
+
+    </style>
+
+   <!-- <script src="cordova.js"></script>-->          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app2.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    
+</head>
+
+<body>
+    
+    <div data-role="page" id="home">
+    <div class="header_crm" data-theme="b" data-role="header" data-position="fixed" >
+               <a href="#home" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" onclick="location.href='home.html'">Back</a>   
+        
+         <a href="#storeissue" data-icon="arrow-r" data-iconpos="notext" data-direction="reverse" onclick="location.href='storeissue.html'">Back</a>   
+        
+<!--
+        <a href="#home" data-icon="arrow-r" data-iconpos="notext" data-direction="reverse" onclick="location.href='issue2.html'">Back</a>   
+-->
+        
+          
+
+        <h3>STORES VISITED </h3>
+       
+        
+    </div> 
+<input  data-theme="a|b" data-type="search" name="search-mini" id="search-mini" value="" data-mini="true" placeholder="Search Pharma....." />
+        <div id="work-in-progress">
+                <div class="work-spinner"></div>
+          </div>
+        
+        <p id="internet_access"></p>
+        
+    <div data-role="content">
+        <div class="example-wrapper" data-iscroll>
+            <ul data-role="listview" data-insert="true" data-filter="true"  data-filtertext="true" data-role="controlgroup" data-enhanced="true" data- data-input="#search-mini" id="movie-list" data-theme="a">
+                
+            </ul>
+        </div>
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed" >
+        <center>
+            <!-- <div class="widget-container content-area horiz-area wrapping-col left"></div>
+           <img src="images/home.png" onclick="location.href='home.html';" alt="logo" />-->
+          <input type="submit" data-icon="home" data-iconpos="notext" data-direction="reverse" onclick="location.href='home.html'" class="button button2" value="HOME" />
+            </center>
+       
+    </div>           
+</div>
+
+              
+              
+
+   
+        
+       
+        
+
+   
+
+    
+
+
+</body>
+</html>

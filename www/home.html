@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <script type="text/javascript">
+    
+        
+
+$( function() {
+           $( "#crm_date" ).datepicker({
+            onSelect: function(dateText, inst) {
+               $(this).val(dateText);
+               $(this).change();
+            
+            },
+           changeMonth: true,
+           changeYear: true,
+           yearRange: 'c-100:c+100'
+           });
+              
+           } );
+            
+             $( function() {
+           $( "#crm_po_signed_date" ).datepicker({
+            onSelect: function(dateText, inst) {
+               $(this).val(dateText);
+               $(this).change();
+            
+            },
+           changeMonth: true,
+           changeYear: true,
+           yearRange: 'c-100:c+100'
+           });
+              
+           } );
+            
+              $( function() {
+           $( "#crm_hemas_date" ).datepicker({
+            onSelect: function(dateText, inst) {
+               $(this).val(dateText);
+               $(this).change();
+            
+            },
+           changeMonth: true,
+           changeYear: true,
+           yearRange: 'c-100:c+100'
+           });
+              
+           } );
+        
+   
+    </script>
+    
+    
+    <style>
+        button {
+         text-align:right;
+            font-weight: bold;
+            outline: none;
+            align-items: flex-end;
+            align-self: flex-end''
+           
+            
+        }
+    </style>
+    
+    <title>99 Retail Street CRM Reports</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+<!--
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+-->
+    
+    <link rel="stylesheet" href="css/app.css"/>
+    
+    
+       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/app2.css">
+
+    
+    
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+        
+      
+
+    </style>
+
+   <!-- <script src="cordova.js"></script>-->          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    
+</head>
+
+<body>
+    
+    <div data-role="page" id="home">
+    <div class="header_crm" data-theme="b" data-role="header" data-position="fixed" >
+               
+        
+         <a href="#storeissue"  class="ui-btn ui-shadow ui-corner-all ui-icon-shop ui-btn-icon-notext" onclick="location.href='storeissue.html'">Search</a>
+        
+        <a href="#storevisited"  class="ui-btn ui-shadow ui-corner-all ui-icon-action ui-btn-icon-notext" onclick="location.href='storevisited.html'">Search</a>
+      <!--  
+        <a href="index.html" class="ui-btn ui-icon-power ui-btn-icon-right  ui-btn-icon-notext" onclick="location.href='index.html'">Logout</a>-->
+
+        <h3>ALL STORES </h3>
+       
+        
+    </div> 
+<input  data-theme="a|b" data-type="search" name="search-mini" id="search-mini" value="" data-mini="true" placeholder="Search Pharma....." />
+        <div id="work-in-progress">
+                <div class="work-spinner"></div>
+          </div>
+        
+        <p id="internet_access"></p>
+        
+    <div data-role="content">
+        <div class="example-wrapper" data-iscroll>
+            <ul data-role="listview" data-insert="true" data-filter="true" data-autodividers="true" data-filtertext="true" data-role="controlgroup" data-enhanced="true" data- data-input="#search-mini" id="movie-list" data-theme="a">
+                
+            </ul>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b"> <!-- fixed footer -->
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#storeissue" onclick="location.href='storeissue.html'" data-icon="home" >STORES ISSUES</a></li>
+				
+                
+				<li><a href="#storevisited" onclick="location.href='storevisited.html'" data-icon="forward" >STORES VISITED</a></li>
+			</ul>		
+		</div>
+	</div>        
+</div>
+<div data-role="page" id="headline">
+    <div data-theme="b" data-role="header">
+       <a href="#home" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" >Back</a>                        
+        <h3>
+            Store Details
+        </h3>
+    </div>        
+    <div data-role="content">
+        <!--<ul data-role="listview"  id="movie-data" data-theme="a">
+            
+        </ul>-->
+        
+<!--
+        <form  id = "myForm" action="/home.html" method="get">
+-->
+        
+        	<center>
+
+
+
+ <table>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <b>Store ID</b>
+                        <br>
+                    </td>
+                    <td>
+                        <input type="number"  id="store_id" readonly>
+                        <br>
+                    </td>
+                </tr>
+
+                
+                <!--  <tr>
+                    <td>
+                        <b>Store ID</b>
+                        <br>
+                    </td>
+                    <td>
+                        <input type="text"  id="store_id2" readonly>
+                        <br>
+                    </td>
+                </tr>-->
+
+                
+                
+                <tr>
+                    <td>
+                        <b>Store Name</b>
+                        <br>
+                    </td>
+                    <td>
+                        <input type="text" id="store_name" align="right" readonly required>
+                        <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Store Visit Date</b>
+                        <br>
+                    </td>
+                    <td>
+                        <input  type="date" id="store_visit_date" required >
+                        <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Address</b>
+                        <br>
+                    </td>
+                    <td>
+                        <input type="text" id="store_address" align="right">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>APK Version</b>
+                        <br>
+                    </td>
+                    <td>
+                        <input type="number" id="store_apk_version" step="0.3" align="right">
+                        <br>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td>
+                        <b>Issue</b>
+                        <br>
+                    </td>
+                    <td>
+                       <select name="select-native-3" id="store_issue" data-iconpos="left">
+          <option value="No Issue">No Issue</option>
+        <option value="Software Issue">Software Issue</option>
+        <option value="Hardware Issue">Hardware Issue</option>
+        <option value="Others">Others</option>
+         
+    </select>
+                        <br>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <b>Comment</b>
+                        <br>
+                    </td>
+                    <td>
+                        <input type="text" id="store_comment" align="right">
+                        <br>
+                    </td>
+                </tr>
+                
+                
+
+            </tbody>
+        </table>
+   
+        
+        </center>
+        
+          <center>
+<!--
+          <input type="submit" name="submit"  id ="uploadbutton" class="button button2" value="UPDATE" />
+-->
+
+               <button class="button button2" id ="uploadbutton"  data-theme="b" >UPDATE</button>
+    </center>
+<!--
+        </form>
+-->
+    </div>
+</div>    
+
+    
+
+
+</body>
+</html>
